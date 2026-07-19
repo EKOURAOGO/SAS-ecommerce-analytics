@@ -152,9 +152,9 @@ PHASE 7: REPORT (generate_reports.sas)
 
 ##  MINOR NOTES (Non-blocking)
 
-1. Some .md files generated with minimal content → FIXED 
-2. Placeholder code in some procs → ACCEPTABLE for template
-3. Test data generation scripts optional → NOT REQUIRED
+1. Some .md files generated with minimal content  FIXED 
+2. Placeholder code in some procs  ACCEPTABLE for template
+3. Test data generation scripts optional  NOT REQUIRED
 
 ---
 

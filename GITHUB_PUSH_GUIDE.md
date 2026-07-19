@@ -2,7 +2,7 @@
 
 ##  STATUS ACTUEL
 
-Le projet SAS E-Commerce Analytics est **100% prêt** pour GitHub!
+Le projet SAS E-Commerce Analytics est **100% prt** pour GitHub!
 
 ```
 Commits locaux: 4 
@@ -11,14 +11,14 @@ Commits locaux: 4
  3099dae  fix: Correct critical errors & complete documentation
  ff297a2  Initial commit: SAS E-Commerce Analytics Platform
 
-Status: Clean, prêt à pousser
+Status: Clean, prt  pousser
 ```
 
 ---
 
-##  ÉTAPES POUR POUSSER SUR GITHUB
+##  TAPES POUR POUSSER SUR GITHUB
 
-### Étape 1⃣: Créer le repo sur GitHub
+### tape 1: Crer le repo sur GitHub
 
 1. Va sur: https://github.com/new
 2. Remplis:
@@ -30,7 +30,7 @@ Status: Clean, prêt à pousser
 
 ---
 
-### Étape 2⃣: Configurer Git localement
+### tape 2: Configurer Git localement
 
 Sur ta machine, va dans le dossier du projet:
 
@@ -45,7 +45,7 @@ git remote add origin https://github.com/EKOURAOGO/sas-ecommerce-analytics.git
 git branch -M main
 ```
 
-**Vérifie:**
+**Vrifie:**
 ```bash
 git remote -v
 # Devrait afficher:
@@ -55,21 +55,21 @@ git remote -v
 
 ---
 
-### Étape 3⃣: Pousser le projet
+### tape 3: Pousser le projet
 
 ```bash
 git push -u origin main
 ```
 
-**Quand demandé:**
+**Quand demand:**
 - Username: `EKOURAOGO`
 - Password: **[Ton Personal Access Token]**
 
  **Token:** Utilise un PAT, pas ton mot de passe GitHub !
 
-Génère un token si tu n'en as pas:
+Gnre un token si tu n'en as pas:
 1. Va sur: https://github.com/settings/tokens
-2. Clique **"Generate new token"** → **"Generate new token (classic)"**
+2. Clique **"Generate new token"**  **"Generate new token (classic)"**
 3. Donne-lui:
    - **Name:** `sas-ecommerce-push`
    - **Expiration:** 90 jours
@@ -79,22 +79,22 @@ Génère un token si tu n'en as pas:
 
 ---
 
-### Étape 4⃣: Vérifier le push
+### tape 4: Vrifier le push
 
-Après le push, vérifies sur GitHub:
+Aprs le push, vrifies sur GitHub:
 
 1. Va sur: https://github.com/EKOURAOGO/sas-ecommerce-analytics
-2. Vérifie:
+2. Vrifie:
    -  4 commits visibles
-   -  Tous les fichiers présents
-   -  README.md affiché
+   -  Tous les fichiers prsents
+   -  README.md affich
    -  Dossiers: programs/, config/, data/, output/
 
 ---
 
-### Étape 5⃣: Nettoyer (Optionnel)
+### tape 5: Nettoyer (Optionnel)
 
-Après le push réussi, tu peux révoquer le token (pour la sécurité):
+Aprs le push russi, tu peux rvoquer le token (pour la scurit):
 
 1. Va sur: https://github.com/settings/tokens
 2. Trouve le token `sas-ecommerce-push`
@@ -104,17 +104,17 @@ Après le push réussi, tu peux révoquer le token (pour la sécurité):
 
 ##  CHECKLIST AVANT DE POUSSER
 
-- [ ] Dossier téléchargé et extrait
-- [ ] Repo créé sur GitHub (vide)
+- [ ] Dossier tlcharg et extrait
+- [ ] Repo cr sur GitHub (vide)
 - [ ] Terminal ouvert dans le dossier du projet
-- [ ] Git remote ajouté
-- [ ] Branch switchée à `main`
-- [ ] PAT généré et copié
-- [ ] Prêt à faire `git push -u origin main`
+- [ ] Git remote ajout
+- [ ] Branch switche  `main`
+- [ ] PAT gnr et copi
+- [ ] Prt  faire `git push -u origin main`
 
 ---
 
-##  CE QUI SERA PUSHÉ
+##  CE QUI SERA PUSH
 
 **Fichiers SAS (8):**
 -  programs/config.sas (184 lignes)
@@ -144,16 +144,16 @@ ff297a2  Initial commit: SAS E-Commerce Analytics Platform
 
 ---
 
-##  APRÈS LE PUSH
+##  APRS LE PUSH
 
 **Ton repo GitHub sera:**
 -  Public (visible pour les recruteurs)
--  Bien documenté (878 lignes de doc)
--  Production-ready (100% des tests passés)
--  Professionnel (commits bien formatés)
+-  Bien document (878 lignes de doc)
+-  Production-ready (100% des tests passs)
+-  Professionnel (commits bien formats)
 
-**Prochaines étapes:**
-1. Ajoute-le à ton portfolio
+**Prochaines tapes:**
+1. Ajoute-le  ton portfolio
 2. Partage le lien avec les recruteurs
 3. Pin le repo sur ton profil GitHub
 
@@ -170,11 +170,11 @@ git remote add origin https://github.com/EKOURAOGO/sas-ecommerce-analytics.git
 ### Erreur: "Authentication failed"
 - Assure-toi que le PAT est valide
 - Ajoute le scope `repo`
-- Réessaye avec le nouveau token
+- Ressaye avec le nouveau token
 
 ### Erreur: "Repository not found"
-- Vérifie que tu as créé le repo sur GitHub
-- Vérifie l'URL: `https://github.com/EKOURAOGO/sas-ecommerce-analytics.git`
+- Vrifie que tu as cr le repo sur GitHub
+- Vrifie l'URL: `https://github.com/EKOURAOGO/sas-ecommerce-analytics.git`
 
 ---
 
@@ -182,6 +182,6 @@ git remote add origin https://github.com/EKOURAOGO/sas-ecommerce-analytics.git
 
 **Rapport final:** `FINAL_VERIFICATION_REPORT.md`   
 **Status:** 100% Production Ready   
-**Prêt à pousser:** OUI 
+**Prt  pousser:** OUI 
 
 **Bonne chance! **

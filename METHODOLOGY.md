@@ -62,7 +62,7 @@
 5. Timeliness: Data is current
 
 ### Outlier Management
-- Identify using IQR method (1.5 × IQR)
+- Identify using IQR method (1.5  IQR)
 - Document and flag for review
 - Separate analysis for robust estimates
 

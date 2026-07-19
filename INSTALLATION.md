@@ -36,7 +36,7 @@ cd sas-ecommerce-analytics
 ```
 
 ### Step 2: Download Dataset
-- Dataset: Global E-Commerce Dataset (+1M Records, 2024–2026)
+- Dataset: Global E-Commerce Dataset (+1M Records, 20242026)
 - URL: https://www.kaggle.com/datasets/akrambelha/global-e-commerce-dataset-1m-records-20242026
 - Place in: `data/ecommerce_raw.csv`
 

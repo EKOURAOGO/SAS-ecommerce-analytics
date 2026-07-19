@@ -23,16 +23,16 @@ Advanced SAS-based analytics system analyzing 1M+ e-commerce transactions for cu
 - **Granularity:** Transaction-level with customer demographics
 
 **Key Variables:**
-- `order_id` — Unique transaction identifier
-- `customer_id` — Customer primary key
-- `order_date` — Transaction timestamp
-- `product_category` — Category classification
-- `product_price` — Unit price (USD)
-- `quantity` — Units purchased
-- `order_value` — Total transaction value
-- `return_status` — Return indicator
-- `customer_age` — Customer demographics
-- `region` — Geographic location
+- `order_id`  Unique transaction identifier
+- `customer_id`  Customer primary key
+- `order_date`  Transaction timestamp
+- `product_category`  Category classification
+- `product_price`  Unit price (USD)
+- `quantity`  Units purchased
+- `order_value`  Total transaction value
+- `return_status`  Return indicator
+- `customer_age`  Customer demographics
+- `region`  Geographic location
 
 **Data Dimensions:**
 - Customers: 100K+
@@ -45,32 +45,32 @@ Advanced SAS-based analytics system analyzing 1M+ e-commerce transactions for cu
 ```
 sas-ecommerce-analytics/
  programs/
-    main_analysis.sas           — Primary analysis workflow
-    config.sas                  — Global settings & macros
-    utility_macros.sas          — Reusable SAS macros
-    quality_checks.sas          — Data quality validation
-    exploratory_analysis.sas    — EDA & visualization
-    predictive_models.sas       — Churn & revenue models
-    export_results.sas          — Output generation
-    generate_reports.sas        — Automated reporting
+    main_analysis.sas            Primary analysis workflow
+    config.sas                   Global settings & macros
+    utility_macros.sas           Reusable SAS macros
+    quality_checks.sas           Data quality validation
+    exploratory_analysis.sas     EDA & visualization
+    predictive_models.sas        Churn & revenue models
+    export_results.sas           Output generation
+    generate_reports.sas         Automated reporting
 
  data/
-    ecommerce_raw.csv           — Raw 1M transactions
-    processed/                  — Intermediate datasets
+    ecommerce_raw.csv            Raw 1M transactions
+    processed/                   Intermediate datasets
 
  output/
-    reports/                    — RTF reports
-    datasets/                   — CSV exports
-    graphics/                   — ODS output
-    logs/                       — Execution logs
+    reports/                     RTF reports
+    datasets/                    CSV exports
+    graphics/                    ODS output
+    logs/                        Execution logs
 
  config/
-    parameters.txt              — Configuration parameters
+    parameters.txt               Configuration parameters
 
  docs/
-    data_dictionary.md          — Variable definitions
-    methodology.md              — Analysis approach
-    technical_guide.md          — Implementation guide
+    data_dictionary.md           Variable definitions
+    methodology.md               Analysis approach
+    technical_guide.md           Implementation guide
 
  README.md (this file)
 ```
@@ -99,7 +99,7 @@ git clone https://github.com/EKOURAOGO/sas-ecommerce-analytics
 cd sas-ecommerce-analytics
 
 # 2. Download data from Kaggle
-# - Dataset: Global E-Commerce Dataset (+1M Records, 2024–2026)
+# - Dataset: Global E-Commerce Dataset (+1M Records, 20242026)
 # - URL: https://www.kaggle.com/datasets/akrambelha/global-e-commerce-dataset-1m-records-20242026
 # - Place in: data/ecommerce_raw.csv
 
@@ -180,10 +180,10 @@ run;
 **Model Type:** Logistic Regression (PROC LOGISTIC)
 
 **Predictors:**
-- `log_clv` — Log customer lifetime value
-- `recency` — Days since last purchase
-- `frequency` — Purchase count
-- `monetary` — Average order value
+- `log_clv`  Log customer lifetime value
+- `recency`  Days since last purchase
+- `frequency`  Purchase count
+- `monetary`  Average order value
 
 **Model Features:**
 - Stepwise variable selection (AIC-based)
@@ -209,10 +209,10 @@ run;
 ##  Key Outputs
 
 ### Data Artifacts
-- `customer_metrics.csv` — Aggregated customer-level data
-- `churn_predictions.csv` — Predicted churn scores & classifications
-- `category_revenue.csv` — Revenue by product category
-- `outliers_detected.csv` — Identified anomalies
+- `customer_metrics.csv`  Aggregated customer-level data
+- `churn_predictions.csv`  Predicted churn scores & classifications
+- `category_revenue.csv`  Revenue by product category
+- `outliers_detected.csv`  Identified anomalies
 
 ### Model Artifacts
 - Parameter estimates (estimates.txt)
@@ -220,10 +220,10 @@ run;
 - Model diagnostics (fit_statistics.txt)
 
 ### Reports
-- `ecommerce_analysis_report.rtf` — Comprehensive analysis
-- `executive_summary.html` — Dashboard view
-- `quality_assurance_log.txt` — Data validation results
-- `execution_summary.log` — Process logs
+- `ecommerce_analysis_report.rtf`  Comprehensive analysis
+- `executive_summary.html`  Dashboard view
+- `quality_assurance_log.txt`  Data validation results
+- `execution_summary.log`  Process logs
 
 ##  Statistical Methods
 
@@ -362,12 +362,12 @@ proc contents data=work.dataset; run;
 ##  Author
 
 **Emmanuel Kouraogo**  
-Data Science · Statistical Analysis · SAS Programming  
+Data Science  Statistical Analysis  SAS Programming  
 [GitHub](https://github.com/EKOURAOGO) | [LinkedIn](https://linkedin.com/in/ekouraogo)
 
 ##  License
 
-MIT License — See LICENSE file for details
+MIT License  See LICENSE file for details
 
 ##  Acknowledgments
 
