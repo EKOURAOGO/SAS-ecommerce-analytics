@@ -3,6 +3,9 @@
 /* Data Import & Exploratory Analysis Pipeline                             */
 /* ========================================================================= */
 
+%put NOTE: Loading configuration...;
+%include "&programs_root/config.sas";
+
 options validvarname=v7 mprint symbolgen;
 ods graphics on / width=10in height=6in;
 
@@ -10,13 +13,9 @@ ods graphics on / width=10in height=6in;
 /* STEP 1: IMPORT DATA FROM KAGGLE E-COMMERCE DATASET                      */
 /* ========================================================================= */
 
-%let input_path = /data/ecommerce_raw.csv;
-%let output_path = /output;
+%put NOTE: Importing data from &raw_data;
 
-proc printto log="&output_path/import_log.txt";
-run;
-
-proc import datafile="&input_path"
+proc import datafile="&raw_data"
     out=work.ecommerce_raw
     dbms=csv
     replace;
@@ -24,8 +23,10 @@ proc import datafile="&input_path"
     guessingrows=5000;
 run;
 
-proc printto log=log;
-run;
+%if &syserr ne 0 %then %do;
+    %put ERROR: Data import failed with SYSERR=&syserr;
+    %abort;
+%end;
 
 /* ========================================================================= */
 /* STEP 2: DATA EXPLORATION & QUALITY CHECKS                               */
@@ -225,7 +226,7 @@ run;
 /* STEP 9: ODS OUTPUT - GENERATE REPORTS                                   */
 /* ========================================================================= */
 
-ods rtf file="&output_path/ecommerce_analysis_report.rtf" style=journal;
+ods rtf file="&output_root/reports/ecommerce_analysis_report.rtf" style=journal;
 
 title1 "E-Commerce Analytics Report";
 title2 "Comprehensive Customer & Sales Analysis";
@@ -244,33 +245,40 @@ ods rtf close;
 /* ========================================================================= */
 
 proc export data=work.customer_metrics
-    outfile="&output_path/customer_metrics.csv"
+    outfile="&output_root/datasets/customer_metrics.csv"
     dbms=csv replace;
 run;
 
 proc export data=work.test_scored
-    outfile="&output_path/churn_predictions.csv"
+    outfile="&output_root/datasets/churn_predictions.csv"
     dbms=csv replace;
 run;
 
 /* ========================================================================= */
-/* EXECUTION LOG                                                            */
+/* EXECUTION LOG & SUMMARY                                                  */
 /* ========================================================================= */
 
-proc printto log="&output_path/execution_summary.log" new;
-run;
+proc sql noprint;
+    select nobs into :n_clean from sashelp.vtable 
+        where libname='WORK' and memname='ECOMMERCE_CLEAN';
+    select nobs into :n_customers from sashelp.vtable 
+        where libname='WORK' and memname='CUSTOMER_METRICS';
+    select nobs into :n_train from sashelp.vtable 
+        where libname='WORK' and memname='MODEL_TRAIN';
+    select nobs into :n_test from sashelp.vtable 
+        where libname='WORK' and memname='MODEL_TEST';
+quit;
 
 %put ========================================;
 %put SAS E-COMMERCE ANALYSIS PIPELINE COMPLETE;
 %put ========================================;
 %put Analysis Date: %sysfunc(today(), ddmmyy10.);
-%put Observations Processed: %nobs(work.ecommerce_clean);
-%put Customers Analyzed: %nobs(work.customer_metrics);
-%put Model Training Observations: %nobs(work.model_train);
-%put Model Testing Observations: %nobs(work.model_test);
+%put Observations Processed: &n_clean;
+%put Customers Analyzed: &n_customers;
+%put Model Training Observations: &n_train;
+%put Model Testing Observations: &n_test;
 %put ========================================;
-
-proc printto log=log;
-run;
+%put Output Location: &output_root;
+%put ========================================;
 
 quit;
