@@ -2,7 +2,7 @@
 
 > Enterprise-grade SAS analytics platform for e-commerce customer segmentation, churn prediction, and business intelligence
 
-## 🎯 Project Overview
+##  Project Overview
 
 Advanced SAS-based analytics system analyzing 1M+ e-commerce transactions for customer behavior prediction, lifetime value modeling, and retention strategy optimization. Production-ready code with enterprise governance and compliance standards.
 
@@ -13,7 +13,7 @@ Advanced SAS-based analytics system analyzing 1M+ e-commerce transactions for cu
 - Automated reporting pipeline
 - Data quality assessment framework
 
-## 📊 Dataset
+##  Dataset
 
 **Source:** Kaggle Global E-Commerce Dataset (February 2026)
 
@@ -40,42 +40,42 @@ Advanced SAS-based analytics system analyzing 1M+ e-commerce transactions for cu
 - Geographic regions: 150+
 - Time period: 24 months
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```
 sas-ecommerce-analytics/
-├── programs/
-│   ├── main_analysis.sas           — Primary analysis workflow
-│   ├── config.sas                  — Global settings & macros
-│   ├── utility_macros.sas          — Reusable SAS macros
-│   ├── quality_checks.sas          — Data quality validation
-│   ├── exploratory_analysis.sas    — EDA & visualization
-│   ├── predictive_models.sas       — Churn & revenue models
-│   ├── export_results.sas          — Output generation
-│   └── generate_reports.sas        — Automated reporting
-│
-├── data/
-│   ├── ecommerce_raw.csv           — Raw 1M transactions
-│   └── processed/                  — Intermediate datasets
-│
-├── output/
-│   ├── reports/                    — RTF reports
-│   ├── datasets/                   — CSV exports
-│   ├── graphics/                   — ODS output
-│   └── logs/                       — Execution logs
-│
-├── config/
-│   └── parameters.txt              — Configuration parameters
-│
-├── docs/
-│   ├── data_dictionary.md          — Variable definitions
-│   ├── methodology.md              — Analysis approach
-│   └── technical_guide.md          — Implementation guide
-│
-└── README.md (this file)
+ programs/
+    main_analysis.sas           — Primary analysis workflow
+    config.sas                  — Global settings & macros
+    utility_macros.sas          — Reusable SAS macros
+    quality_checks.sas          — Data quality validation
+    exploratory_analysis.sas    — EDA & visualization
+    predictive_models.sas       — Churn & revenue models
+    export_results.sas          — Output generation
+    generate_reports.sas        — Automated reporting
+
+ data/
+    ecommerce_raw.csv           — Raw 1M transactions
+    processed/                  — Intermediate datasets
+
+ output/
+    reports/                    — RTF reports
+    datasets/                   — CSV exports
+    graphics/                   — ODS output
+    logs/                       — Execution logs
+
+ config/
+    parameters.txt              — Configuration parameters
+
+ docs/
+    data_dictionary.md          — Variable definitions
+    methodology.md              — Analysis approach
+    technical_guide.md          — Implementation guide
+
+ README.md (this file)
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -129,7 +129,7 @@ cd sas-ecommerce-analytics
 %include '/path/to/programs/predictive_models.sas';
 ```
 
-## 📈 Analysis Components
+##  Analysis Components
 
 ### 1. Data Import & Quality Assessment
 
@@ -206,7 +206,7 @@ run;
 - Revenue forecasting
 - Quality assurance logs
 
-## 📊 Key Outputs
+##  Key Outputs
 
 ### Data Artifacts
 - `customer_metrics.csv` — Aggregated customer-level data
@@ -225,7 +225,7 @@ run;
 - `quality_assurance_log.txt` — Data validation results
 - `execution_summary.log` — Process logs
 
-## 🧮 Statistical Methods
+##  Statistical Methods
 
 ### Descriptive Statistics
 - **Central Tendency:** Mean, median, mode
@@ -247,7 +247,7 @@ run;
 - **Discrimination:** ROC curve, AUC, Gini coefficient
 - **Calibration:** Hosmer-Lemeshow test
 
-## 💼 Business Applications
+##  Business Applications
 
 1. **Customer Retention:**
    - Identify churn-prone customers
@@ -269,7 +269,7 @@ run;
    - Campaign effectiveness measurement
    - ROI optimization
 
-## 🔒 Data Governance & Security
+##  Data Governance & Security
 
 **Best Practices:**
 - Input validation & sanitization
@@ -284,7 +284,7 @@ run;
 - User authentication integration
 - Data masking for sensitive variables
 
-## 📝 Documentation
+##  Documentation
 
 | Document | Purpose |
 |----------|---------|
@@ -293,7 +293,7 @@ run;
 | `technical_guide.md` | Implementation & deployment guide |
 | `macro_reference.md` | Utility macro documentation |
 
-## 🧪 Testing & Validation
+##  Testing & Validation
 
 **Quality Assurance:**
 - Data completeness checks (missing values)
@@ -306,7 +306,7 @@ run;
 - Scenario testing (edge cases)
 - Version control (reproducibility)
 
-## 🚀 Deployment & Scalability
+##  Deployment & Scalability
 
 **Production Readiness:**
 - Scheduled batch processing (SAS Scheduler)
@@ -320,7 +320,7 @@ run;
 - Memory-efficient algorithms
 - Cloud deployment (SAS Viya)
 
-## 📊 Performance Benchmarks
+##  Performance Benchmarks
 
 | Component | Records | Runtime | Memory |
 |-----------|---------|---------|--------|
@@ -330,7 +330,7 @@ run;
 | Report Gen. | All | ~90 sec | 300MB |
 | **Total** | **1M** | **~4 min** | **~2GB** |
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -352,24 +352,24 @@ options validvarname=v7;
 proc contents data=work.dataset; run;
 ```
 
-## 📚 Resources
+##  Resources
 
 - **SAS Documentation:** https://support.sas.com/documentation/
 - **SAS Community:** https://communities.sas.com/
 - **SAS Learning:** https://www.sas.com/en_us/software/sas-training.html
 - **Kaggle Dataset:** https://www.kaggle.com/datasets/akrambelha/global-e-commerce-dataset-1m-records-20242026
 
-## 👤 Author
+##  Author
 
 **Emmanuel Kouraogo**  
 Data Science · Statistical Analysis · SAS Programming  
 [GitHub](https://github.com/EKOURAOGO) | [LinkedIn](https://linkedin.com/in/ekouraogo)
 
-## 📄 License
+##  License
 
 MIT License — See LICENSE file for details
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Kaggle for public e-commerce dataset
 - SAS Institute for software & documentation

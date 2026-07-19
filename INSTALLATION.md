@@ -100,10 +100,10 @@ run;
 ```
 
 Success indicators:
-- ✅ No errors in log
-- ✅ Data imported correctly
-- ✅ Directories created
-- ✅ Libraries defined
+-  No errors in log
+-  Data imported correctly
+-  Directories created
+-  Libraries defined
 
 ---
 
